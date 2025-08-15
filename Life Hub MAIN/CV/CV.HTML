@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alaa Eldeeb - Engineering Student CV</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background: #f5f1e9; 
+      color: #4b4a47; 
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cv-container {
+      background: #fff8f0;
+      max-width: 850px;
+      width: 100%;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(166, 124, 82, 0.3);
+    }
+
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      color: #a67c52; 
+      margin-bottom: 15px;
+    }
+
+    .contact-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact-section a {
+      display: inline-block;
+      margin: 0 12px;
+      border-radius: 50%;
+    }
+    .contact-section a img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+    }
+   
+    .contact-section span {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 600;
+      font-size:17PX;
+      color: #4b4a47;
+    }
+
+    h2 {
+      color: #a67c52;
+      border-bottom: 3px solid #a67c52;
+      padding-bottom: 5px;
+      margin-top: 35px;
+      font-size: 26px;
+    }
+
+    p, li {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .skill {
+      background-color: #a67c52;
+      color: white;
+      padding: 7px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 19px;
+      margin-bottom: 6px;
+      color: #4b4a47;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+
+    <h1>Alaa Eldeeb</h1>
+
+    <!-- Contact section -->
+    <div class="contact-section">
+      <a href="mailto:alaaeldeeb495@gmail.com"target="_blank" title="Email">
+              <img src="CVIMG/EMAIL.jpeg" alt="Gmail Logo">
+      </a>
+      <a href="https://www.linkedin.com/in/alaa-eldeeb-9a22a2201/" target="_blank" rel="noopener" title="LinkedIn">
+          <img src="CVIMG/LINKEDIN.jpeg" alt="LinkedIn Logo">
+      </a>
+
+      <div>
+        <span>📞 +20 123 456 7890</span>
+      </div>
+    </div>
+
+
+    <section class="section">
+      <h2>Education</h2>
+      <p><strong>Tanta University, Faculty of Engineering</strong><br />
+      B.Sc. in Electronics and Communication Engineering<br />
+      Graduation Year: 2028 | Gharbiya, Egypt</p>
+
+      <p><strong>Gharbiya STEM School</strong><br />
+      Math Division | Graduation Year: 2023</p>
+    </section>
+
+    <section class="section">
+      <h2>Extracurricular Activities</h2>
+      <ul>
+        <li><strong>Khoshdash – Operations Team Member</strong><br />Tanta University | Feb 2025 – Present<br />• Event planning and logistics coordination</li>
+        <li><strong>Mechanical Engineering Club (MEC)</strong><br />Tanta University | Oct 2023 – Present<br />
+          • Robotics Division (Sep 2024 – Present): Electronics, Arduino, automation, and control systems<br />
+          • PR member (Oct 2023 – Present)<br />
+          • Aerospace Division (Oct 2023 – Sep 2024): Studied theory and design of drones and RC planes using SolidWorks
+        </li>
+        <li><strong>Ambassador – Global Ties U.S.</strong><br />MERGE '23 Exchange Program<br />• Learned cognitive science-based stress relief techniques<br />• Participated in weekly discussions on mental health</li>
+        <li><strong>Young Member – New York Academy of Sciences</strong><br />Issued July 2022</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Trainings</h2>
+      <ul>
+        <li><strong>CS50 course, ITI</strong><br />Jun 2025 – Jul 2025<br />
+          • Completed CS50 course covering algorithms, data structures, C++, Python, SQL, and web development.<br />
+          • Built problem-solving and debugging skills through hands-on assignments and projects.
+        </li>
+        <li><strong>Microcontroller based systems, NTI</strong><br />Jul 2025 – Aug 2025<br />
+          • 84 hours total (72h AVR + 12h Business Skills)<br />
+          • Covered ATmega32, embedded-C, GPIO interfacing, timers, PWM, serial protocols.<br />
+          • Includes projects and business skills module on communication, time management, teamwork, problem solving.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div>
+        <p class="project-title">Study Mate</p>
+        <p>Team Project · 5 Members · Supervised by Dr. Nada Mohamed Taha El-Shennawy<br />
+        Developed a 3-in-1 desktop app using Tkinter, CustomTkinter, Google APIs, gTTS/Pygame, and PIL.</p>
+      </div>
+      <div>
+        <p class="project-title">Digital Time Counter</p>
+        <p>Team Project · 8 Members · Supervised by Dr. Mohamed Nasr<br />
+        Designed a 12-hour digital clock using 4026 ICs, 555 Timer, and 7-segment displays. Simulated in Proteus and implemented on breadboard.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Multisim</span>
+        <span class="skill">C++</span>
+        <span class="skill">Proteus</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Embedded C</span>
+        <span class="skill">Microchip Studio</span>
+        <span class="skill">LaTeX</span>
+        <span class="skill">Canva</span>
+        <span class="skill">Microsoft Office</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Languages</h2>
+      <ul>
+        <li>Arabic: Native</li>
+        <li>English:Intermediate</li>
+        <li>French: Beginner</li>
+        <li>German: Beginner</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>

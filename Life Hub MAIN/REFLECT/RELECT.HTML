@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reflection Zone - Simple</title>
+<style>
+  body {
+    background: #f5f1e9;
+    color: #4b4a47;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  h1 {
+    text-align: center;
+    color: #a67c52;
+    margin-bottom: 30px;
+  }
+  label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+    color: #a67c52;
+  }
+  textarea, select {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Georgia', serif;
+    font-size: 16px; 
+    border: 2px solid #d9a84c;
+    border-radius: 10px;
+    resize: vertical;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  button {
+    background: #a67c52;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 17.6px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+  button:hover {
+    background: #7a5a30;
+  }
+  #entries {
+    border-top: 2px solid #a67c52;
+    padding-top: 20px;
+  }
+  .entry {
+    background: #eae1d8;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(166,124,82,0.15);
+  }
+  .entry-mood {
+    font-weight: 700;
+    color: #7a5a30;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Reflection Zone</h1>
+
+<label for="mood-select">How are you feeling today?</label>
+<select id="mood-select">
+  <option value="">Select a mood</option>
+  <option value="😊 Happy">😊 Happy</option>
+  <option value="😢 Sad">😢 Sad</option>
+  <option value="😰 Anxious">😰 Anxious</option>
+  <option value="😌 Calm">😌 Calm</option>
+  <option value="😡 Angry">😡 Angry</option>
+  <option value="🤩 Excited">🤩 Excited</option>
+</select>
+
+<label for="journal-textarea">Write your journal entry:</label>
+<textarea id="journal-textarea" rows="6" placeholder="Express your thoughts here..."></textarea>
+
+<button id="save-entry-btn">Save Entry</button>
+
+<div id="entries"></div>
+
+<script>
+  const saveBtn = document.getElementById('save-entry-btn');
+  const journalTextarea = document.getElementById('journal-textarea');
+  const moodSelect = document.getElementById('mood-select');
+  const entriesDiv = document.getElementById('entries');
+
+  let entries = [];
+
+saveBtn.addEventListener('click', () => {
+  const text = journalTextarea.value.trim();
+   const mood = moodSelect.value || 'Not specified';
+if (text === '') {
+    alert('Write something first!');
+    return;
+  }
+entries.push(mood + ': ' + text);
+  entriesDiv.innerHTML = '';
+  for (let i = 0; i < entries.length; i++) {
+    entriesDiv.innerHTML += entries[i] + '<br>';
+    journalTextarea.value = '';
+  moodSelect.value = '';
+  }
+});
+
+</script>
+
+</body>
+</html>
